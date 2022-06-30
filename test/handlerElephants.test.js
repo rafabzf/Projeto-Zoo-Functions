@@ -28,9 +28,27 @@ describe('Testes da função HandlerElephants', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('caso for passado errado um parâmetro, retorna null', () => {
+  it('caso for passado um parâmetro que não existe, retorna null', () => {
     const actual = handlerElephants('rafa');
 
     expect(actual).toEqual(null);
+  });
+
+  it('verifica se retorna um número quando "cont" for passado', () => {
+    const actual = handlerElephants('count');
+
+    expect(actual).toEqual(4);
+  });
+
+  it('verifica se retorna uma string quando "location" for passado', () => {
+    const actual = handlerElephants('location');
+
+    expect(actual).toBe('NW');
+  });
+
+  it('verifica se retorna um número próximo a 10.5 quando "averageAge" for passado', () => {
+    const actual = handlerElephants('averageAge');
+
+    expect(actual).toBe(10.5);
   });
 });
