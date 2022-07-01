@@ -6,7 +6,7 @@ describe('Testes da função getOpeningHours', () => {
   });
 
   it('Caso a abreviação estiver errada, retorna um erro', () => {
-    expect(() => getOpeningHours('Friday', '4:00-BM')).toThrowError(new Error(`The abbreviation must be 'AM' or 'PM'`));
+    expect(() => getOpeningHours('Friday', '4:00-BM')).toThrowError(new Error('The abbreviation must be \'AM\' or \'PM\''));
   });
 
   it('Caso não seja passado um número como parâmetro, retorna um erro', () => {
